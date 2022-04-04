@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="movieContainer">
+  <div class="movieHeader">
+    <span>{{title}}</span>
+    <input
+    [(ngModel)]="searchContent"
+    type="text"
+    (keyup)="searchContents()"
+    [placeholder]="placeholder"
+    />
+  </div>
+  <div class="movieContent">
+    <div
+      class="card"
+      *ngFor="let item of content"
+      (click)="geContentDetail(item.id)"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      >
+      <img *ngIf="!item.poster_path"  class="no_picture" src="../../../assets/no-image.png"/>
+      <img *ngIf="item.poster_path" src="{{img_url + item.poster_path}}"/>
+    </div>
+
+  </div>
+  <app-pagination
+    (page)="getPage($event)"
+  ></app-pagination>
+</div>
+
+<app-modal
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      [image]="modalData.image"
+      [description]="modalData.description"
+      [title]="modalData.title"
+      [rate]="modalData.rate"
+      [genres]="modalData.genres"
+      [id]="modalData.id"
+      [release_date]="modalData.release_date"
+></app-modal>

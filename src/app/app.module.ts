@@ -12,6 +12,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { TvComponent } from './pages/tv/tv.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { MoviesSeriesComponent } from './components/movies-series/movies-series.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { TvComponent } from './pages/tv/tv.component';
     ModalComponent,
     MoviesComponent,
     TvComponent,
+    PaginationComponent,
+    MoviesSeriesComponent,
   ],
   imports: [
     BrowserModule,

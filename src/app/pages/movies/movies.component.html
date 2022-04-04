@@ -1,47 +1,5 @@
-<app-header></app-header>
-<div class="movieContainer">
-  <div class="movieHeader">
-    <span>Filmes</span>
-    <input
-    [(ngModel)]="searchMovie"
-    type="text"
-    (keyup)="searchMovies()"
-    placeholder="Buscar filme"
-    />
-  </div>
-  <div class="movieContent">
-    <div
-      class="card"
-      *ngFor="let movie of movies"
-      (click)="getMovieDetail(movie.id)"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-      >
-      <img *ngIf="!movie.poster_path"  class="no_picture" src="../../../assets/no-image.png"/>
-      <img *ngIf="movie.poster_path" src="{{img_url + movie.poster_path}}"/>
-    </div>
-
-    <div class="pagination" #paginagtion *ngIf="movies.length > 19">
-      <button (click)="previousPages()">página anterior</button>
-      <span *ngIf="prevPage > 0 && currentPage > 1">{{prevPage}}</span>
-      <span>{{currentPage}}</span>
-      <span *ngIf="nextPage != 0">{{nextPage}}</span>
-      <button (click)="nextPages()">próxima pagina</button>
-    </div>
-  </div>
-</div>
-
-<app-modal
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-      [image]="modalData.image"
-      [description]="modalData.description"
-      [title]="modalData.title"
-      [rate]="modalData.rate"
-      [genres]="modalData.genres"
-      [id]="modalData.id"
-      [release_date]="modalData.release_date"
-></app-modal>
+<app-movies-series
+  [title]="'Filmes'"
+  [placeholder]="'Buscar filme'"
+  [type]="'movie'"
+></app-movies-series>
