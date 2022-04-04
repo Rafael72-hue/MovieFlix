@@ -1,0 +1,52 @@
+.sideBarContainer {
+    width: 350px;
+    height:100%;
+
+    position:fixed;
+    top: 81px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 25px;
+
+    background-color: #171a1f;
+    border-right: 1px solid #e2e2e2;
+
+    transition: 0.5s;
+
+    padding: 20px;
+
+    a {
+        border-left: 1px solid #FF4155;
+        text-decoration: none;
+        color: #e2e2e2;
+        padding-left: 15px;
+
+        &:hover {
+            color: #0058b5;
+        }
+    }
+    select {
+
+        background-color: #0058b5;
+        color: #e2e2e2;
+
+        font-size: 15px;
+        font-weight: 500;
+
+        padding:10px;
+
+        border-radius: 25px;
+        border: 0;
+        cursor: pointer;
+        option {
+            background: black;
+        }
+    }
+    footer {
+      font-size: 1rem;
+      position: absolute;
+      bottom: 105px;
+    }
+}

@@ -1,0 +1,13 @@
+<div>
+    <header class='headerContainer'>
+
+        <div class="{{openMenu ? 'burguerMenuActivated' : 'burguerMenu'}}" (click)="changeBurguerMenu()">
+            <span id="line1"></span>
+            <span id="line2"></span>
+            <span id="line3"></span>
+        </div>
+        <a routerLink="/" class='logo'>MovieFlix</a>
+    </header>
+    <app-side-menu *ngIf="openMenu"></app-side-menu>
+    <ng-content (openMenu)="openMenu"></ng-content>
+</div>

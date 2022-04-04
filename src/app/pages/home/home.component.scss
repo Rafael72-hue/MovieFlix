@@ -1,0 +1,106 @@
+.homeContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -2;
+  img {
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+  }
+}
+
+// .homeContainer {
+//     position: absolute;
+//     top: 80px;
+//     left: 0;
+//     right: 0;
+//     z-index: -3;
+
+//     width:80%;
+//     margin: auto;
+
+//     .choosenButtons {
+//       width: 400px;
+//       display: flex;
+//       justify-content: space-between;
+//       margin: 50px;
+
+//       button {
+//         font-size: 1.5rem;
+
+//         background: #0058b5;
+//         color:#e2e2e2;
+
+//         border: 0;
+//         border-radius:20px;
+
+//         padding: 15px 40px;
+//       }
+//     }
+
+//     .homeContent {
+
+//       display: grid;
+//       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+//       justify-items: center;
+
+//       .card {
+//         width: 200px;
+//         border-radius: 15px;
+//         margin: 20px;
+//         display: flex;
+//         flex-direction: column;
+//         cursor: pointer;
+
+//         img {
+//           width:auto;
+//           border-radius: 15px;
+
+//           &:hover {
+//             opacity: 0.5;
+//                     transition: 0.5s;
+//           }
+//         }
+//       }
+
+//         app-modal {
+//           .close {
+//             display:block;
+//           }
+//         }
+
+//         .pagination {
+//           position: absolute;
+//           bottom: 0;
+//           margin: -70px;
+//           button{
+//             padding: 20px;
+//             border: 0;
+//             background: rgb(21, 66, 163);
+//             color: #e2e2e2;
+//             cursor: pointer;
+
+//             &:first-child {
+//               border-radius: 20px 0 0 20px;
+//             }
+
+//             &:last-child {
+//               border-radius: 0 20px 20px 0;
+//             }
+//           }
+
+//           span {
+//             padding: 15px 20px;
+//             border: 1px solid white;
+//           }
+//         }
+//     }
+// }

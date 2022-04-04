@@ -1,0 +1,31 @@
+<!--  -->
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-body">
+      <div class="modal" *ngIf="id">
+        <aside>
+          <img *ngIf="!image" src="../../../assets/no-image.png"/>
+          <img *ngIf="image" src="{{img_url + image}}"/>
+        </aside>
+        <div>
+          <header>
+            <span>{{title}}</span>
+            <div class="genres">
+              <span  *ngFor="let genre of genres">{{genre.name}}</span>
+            </div>
+            <div class="more_informations">
+              <span>Data de lançamento: {{release_date | date:'dd/MM/yyyy'}}</span>
+              <span>Nota: {{rate}}</span>
+            </div>
+          </header>
+          <section>
+            <p *ngIf="description">
+              {{description}}
+            </p>
+            <p *ngIf="!description">
+              Este filme está sem descrição
+            </p>
+          </section>
+        </div>
+      </div>
+  </div>
+</div>
