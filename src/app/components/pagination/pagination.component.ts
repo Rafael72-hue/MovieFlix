@@ -18,14 +18,14 @@ export class PaginationComponent implements OnInit {
 
   public nextPages = () => {
     this.currentPage++
+    // MANDANDO NOVA PÁGINA PARA O COMPONENTE PAI
     this.page.emit(this.currentPage.toString())
   }
 
   public previousPages = () => {
-      if (this.currentPage > 1) {
-        this.currentPage--;
-        this.page.emit(this.currentPage.toString())
-    }
+    this.currentPage--;
+    // MANDANDO NOVA PÁGINA PARA O COMPONENTE PAI
+    this.page.emit(this.currentPage.toString())
   }
 
 }

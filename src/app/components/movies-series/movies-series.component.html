@@ -1,3 +1,4 @@
+<!-- COMPONENTE QUE CARREGA LISTA DE FILMES/SERIES -->
 <app-header></app-header>
 <div class="movieContainer">
   <div class="movieHeader">
@@ -13,7 +14,7 @@
     <div
       class="card"
       *ngFor="let item of content"
-      (click)="geContentDetail(item.id)"
+      (click)="getContentDetail(item.id)"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
       >

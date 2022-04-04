@@ -36,6 +36,7 @@ export class MoviesSeriesComponent implements OnInit {
     this.getAllContents(this.type, page)
   }
 
+  //RETORNA LISTA DE FILMES OU SERIES
   public getAllContents = (content?: string ,page?:number) => {
     this.api.getAllContents(content, page).subscribe((response) => {
       this.content = response.results;
@@ -43,7 +44,8 @@ export class MoviesSeriesComponent implements OnInit {
     })
   }
 
-  public geContentDetail = (movieId: number) => {
+  // PEGA OS DADOS DE UM(A) UNICO(A) FILME/SERIE
+  public getContentDetail = (movieId: number) => {
     this.api.getMovieDetail(this.type, movieId).subscribe(data => {
       if (this.type === 'tv') {
         this.modalData.title = data.name;
@@ -60,6 +62,7 @@ export class MoviesSeriesComponent implements OnInit {
     })
   }
 
+  // FAZ UMA PESQUISA PELO TITULO DE UM(A) FILME/SERIE
   public searchContents = () => {
     if (this.searchContent === '') {
       return this.getAllContents(this.type);
